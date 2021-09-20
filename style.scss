@@ -1,0 +1,58 @@
+$Paleblue: rgb(224, 232, 255);
+$Brightblue: hsl(245, 75%, 52%);
+
+$Desaturatedblue: hsl(224, 23%, 55%);
+$Verypaleblue: hsl(225, 100%, 98%);
+$darkblue: hsl(223, 47%, 23%);
+
+$primary : $Brightblue;
+$secondary : $Desaturatedblue;
+$light: $Verypaleblue;
+$dark: $darkblue;
+
+$border-radius: .725rem;
+$border-radius-lg: 1.25rem;
+
+$card-border-radius: $border-radius-lg;
+
+$input-btn-padding-y: .725rem;
+
+$font-family-base: 'Red Hat Display', sans-serif;
+$font-size-base: 1rem;
+
+$link-color: $Brightblue;
+
+$box-shadow-lg: 0 1rem 2rem rgba($Brightblue, .225);
+$box-shadow-sm: 0 1rem 1rem rgba($Brightblue, .125);
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+body{
+    background: top / cover no-repeat url('./images/pattern-background-mobile.svg');
+    background-size: 200% 200px;
+    background-color: $Paleblue;
+    font-family: 'Red Hat Display', sans-serif;
+}
+@media (min-width: 800px) {body {background: top / cover no-repeat url('./images/pattern-background-desktop.svg');
+    background-size: 100% 40%;
+    background-color: $Paleblue;
+    font-family: 'Red Hat Display', sans-serif;
+}}
+.card a:hover{
+    color: lighten($color: $Brightblue, $amount: 20);
+}
+.card{
+    margin-top: 5rem;
+}
+#proceed:hover{
+    background-color: lighten($color: $Brightblue, $amount: 20);
+    color: white;
+}
+#cancel{
+    color: $Desaturatedblue;
+}
+#cancel:hover{
+    color: $darkblue;
+}
+a:hover{
+    text-decoration: none;
+}
